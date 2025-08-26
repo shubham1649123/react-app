@@ -1,9 +1,25 @@
 import React from "react";
+import ProptTypes from 'prop-types';
 
-export default function Navbar(){
+
+export default function Navbar(props){
     return(
         <div>
-            <h1> hello my name is shubham and i ceate a new app</h1>
+            <ul>
+                <li>{props.home}</li>
+                <li>{props.about}</li>
+                <li>{props.contact}</li>
+            </ul>
         </div>
     )
 }
+Navbar.ProptTypes={
+    home:ProptTypes.string.isRequired,
+    about:ProptTypes.string.isRequired,
+    contact:ProptTypes.string.isRequired
+}
+// Navbar.defaultProps={
+//     home:"set home",
+//     about:"set about",
+//     contact:"set contact"
+// }
